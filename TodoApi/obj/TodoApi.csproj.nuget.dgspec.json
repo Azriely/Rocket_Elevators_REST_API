@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dandu\\OneDrive\\Desktop\\Rocket_Elevators_REST_API\\TodoApi\\TodoApi.csproj": {}
+    "C:\\Users\\Tyler\\Desktop\\Rocket_Elevators_REST_API\\TodoApi\\TodoApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dandu\\OneDrive\\Desktop\\Rocket_Elevators_REST_API\\TodoApi\\TodoApi.csproj": {
+    "C:\\Users\\Tyler\\Desktop\\Rocket_Elevators_REST_API\\TodoApi\\TodoApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dandu\\OneDrive\\Desktop\\Rocket_Elevators_REST_API\\TodoApi\\TodoApi.csproj",
+        "projectUniqueName": "C:\\Users\\Tyler\\Desktop\\Rocket_Elevators_REST_API\\TodoApi\\TodoApi.csproj",
         "projectName": "TodoApi",
-        "projectPath": "C:\\Users\\dandu\\OneDrive\\Desktop\\Rocket_Elevators_REST_API\\TodoApi\\TodoApi.csproj",
-        "packagesPath": "C:\\Users\\dandu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dandu\\OneDrive\\Desktop\\Rocket_Elevators_REST_API\\TodoApi\\obj\\",
+        "projectPath": "C:\\Users\\Tyler\\Desktop\\Rocket_Elevators_REST_API\\TodoApi\\TodoApi.csproj",
+        "packagesPath": "C:\\Users\\Tyler\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tyler\\Desktop\\Rocket_Elevators_REST_API\\TodoApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dandu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Tyler\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,6 +40,36 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql.Design": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
