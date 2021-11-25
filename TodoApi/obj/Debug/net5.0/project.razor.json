@@ -15617,6 +15617,32 @@
     "CSharpLanguageVersion": 900
   },
   "RootNamespace": "TodoApi",
-  "Documents": [],
+  "Documents": [
+    {
+      "FilePath": "c:\\Users\\Tyler\\Desktop\\Rocket_Elevators_REST_API\\TodoApi\\Views\\Home\\Delete.cshtml",
+      "TargetPath": "Views\\Home\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tyler\\Desktop\\Rocket_Elevators_REST_API\\TodoApi\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tyler\\Desktop\\Rocket_Elevators_REST_API\\TodoApi\\Views\\Home\\Details.cshtml",
+      "TargetPath": "Views\\Home\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tyler\\Desktop\\Rocket_Elevators_REST_API\\TodoApi\\Views\\Home\\Create.cshtml",
+      "TargetPath": "Views\\Home\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tyler\\Desktop\\Rocket_Elevators_REST_API\\TodoApi\\Views\\Home\\Edit.cshtml",
+      "TargetPath": "Views\\Home\\Edit.cshtml",
+      "FileKind": "mvc"
+    }
+  ],
   "SerializationFormat": "0.2"
 }

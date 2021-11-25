@@ -26,7 +26,7 @@ namespace TodoApi
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Elevator> Elevators { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
-        public virtual DbSet<Lead> Leads { get; set; }
+        public virtual DbSet<Leads> Leads { get; set; }
         public virtual DbSet<Quote> Quotes { get; set; }
         public virtual DbSet<SchemaMigration> SchemaMigrations { get; set; }
         public virtual DbSet<User> Users { get; set; }
@@ -35,7 +35,7 @@ namespace TodoApi
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+// #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseMySql("server=localhost;database=dominhannguyen;user=root;password=Password123!@#;treattinyasboolean=true", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.27-mysql"));
             }
         }
@@ -483,7 +483,7 @@ namespace TodoApi
                     .HasConstraintName("fk_rails_dcfd3d4fc3");
             });
 
-            modelBuilder.Entity<Lead>(entity =>
+            modelBuilder.Entity<Leads>(entity =>
             {
                 entity.ToTable("leads");
 
