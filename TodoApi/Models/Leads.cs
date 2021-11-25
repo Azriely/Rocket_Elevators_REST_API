@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace TodoApi
 {
-    public partial class Lead
+    public partial class Leads
     {
         public long Id { get; set; }
         public string FullName { get; set; }
