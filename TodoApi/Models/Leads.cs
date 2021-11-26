@@ -21,5 +21,7 @@ namespace TodoApi
         public DateTime UpdatedAt { get; set; }
         public DateTime? CreatedOn { get; set; }
         public string Filename { get; set; }
+
+        public ICollection<Customer> Customers { get; set; }
     }
 }
