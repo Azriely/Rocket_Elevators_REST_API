@@ -50,5 +50,22 @@ namespace TodoApi.Controllers
                 return BadRequest();
             }
         }
+        [HttpPost]
+        public async Task<IActionResult> Process(Column input)
+        {
+            try
+            {
+                Column products = _context.Columns.Where(b => b.Id == input.Id)
+                    .FirstOrDefault();
+                var current_status = products.Status;
+                products.Status = input.Status;
+                _context.SaveChanges();
+                return Ok(current_status);
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
     }
 }

@@ -50,5 +50,25 @@ namespace TodoApi.Controllers
                 return BadRequest();
             }
         }
+      
+
+        [HttpPost]
+        public async Task<IActionResult> Process(Battery input)
+        {
+            try
+            {
+                Battery products = _context.Batteries.Where(b => b.Id == input.Id)
+                    .FirstOrDefault();
+                var current_status = products.Status;
+                products.Status = input.Status;
+                _context.SaveChanges();
+                return Ok(current_status);
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
+
     }
 }

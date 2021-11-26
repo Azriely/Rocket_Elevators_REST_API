@@ -50,5 +50,47 @@ namespace TodoApi.Controllers
                 return BadRequest();
             }
         }
+        [Produces("application/json")]
+        [HttpGet("none")]
+        public async Task<IActionResult> GetSpect1()
+        {
+            try
+            {
+                List<Elevator> nonOperational = new List<Elevator>();
+                var elevator = _context.Elevators.ToList();
+
+                foreach (var e in elevator)
+                {
+                    if(e.Status != "Active")
+                    {
+                        nonOperational.Add(e);
+                    }
+                    
+
+                }
+                return Ok(nonOperational);
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
+        [HttpPost]
+        public async Task<IActionResult> Process(Elevator input)
+        {
+            try
+            {
+                Elevator products = _context.Elevators.Where(b => b.Id == input.Id)
+                    .FirstOrDefault();
+                var current_status = products.Status;
+                products.Status = input.Status;
+                _context.SaveChanges();
+                return Ok(current_status);
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
     }
 }

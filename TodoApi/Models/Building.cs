@@ -24,6 +24,7 @@ namespace TodoApi
         public DateTime UpdatedAt { get; set; }
         public long? AddressId { get; set; }
         public long? CustomerId { get; set; }
+        public long? BatteriesId { get; set; }
 
         public virtual Address Address { get; set; }
         public virtual Customer Customer { get; set; }
