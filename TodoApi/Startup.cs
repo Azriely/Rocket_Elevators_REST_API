@@ -10,10 +10,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
-// using TodoApi.Models;
-
+using TodoApi.Controllers;
+using TodoApi.Models;
 namespace TodoApi
 {
     public class Startup
@@ -22,41 +21,29 @@ namespace TodoApi
         {
             Configuration = configuration;
         }
-
         public IConfiguration Configuration { get; }
-
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // The following isn't entirely correct, something needed to change but I forgot what...
-            // services.AddDbContext<TodoContext>(opt =>
-            //    opt.UseInMemoryDatabase("TodoList"));
-            // services.AddControllers();
-            // services.AddSwaggerGen(c =>
-            // {
-            //     c.SwaggerDoc("v1", new OpenApiInfo { Title = "TodoApi", Version = "v1" });
-            // });
-
-            services.AddDbContext<app_developmentContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("app_developmentContext")));
+            string dbstring = Configuration.GetConnectionString("dbstring");
+            var serverVersion = new MySqlServerVersion(new Version(5, 0));
+            // services.AddDbContext<app_developmentContext>(options =>
+            //         options.UseSqlServer(Configuration.GetConnectionString("dbstring")));
+            services.AddDbContext<app_developmentContext>(opt =>
+                    opt.UseMySql(dbstring, serverVersion));
+            services.AddMvc();
+            services.AddControllers();
         }
-
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                // app.UseSwagger();
-                // app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TodoApi v1"));
             }
-
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
