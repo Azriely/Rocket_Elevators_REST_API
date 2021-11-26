@@ -9,8 +9,8 @@ using TodoApi;
 
 namespace TodoApi.Controllers
 {
-    // [Route("api/[controller]")]
-    // [ApiController]
+    [Route("api/[controller]")]
+    [ApiController]
     public class HomeController : Controller
     {
         private readonly app_developmentContext _context;
@@ -23,7 +23,7 @@ namespace TodoApi.Controllers
         // GET: Home
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Lead.ToListAsync());
+            return View(await _context.Leads.ToListAsync());
         }
 
         // GET: Home/Details/5
@@ -34,7 +34,7 @@ namespace TodoApi.Controllers
                 return NotFound();
             }
 
-            var lead = await _context.Lead
+            var lead = await _context.Leads
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (lead == null)
             {
@@ -74,7 +74,7 @@ namespace TodoApi.Controllers
                 return NotFound();
             }
 
-            var lead = await _context.Lead.FindAsync(id);
+            var lead = await _context.Leads.FindAsync(id);
             if (lead == null)
             {
                 return NotFound();
@@ -125,7 +125,7 @@ namespace TodoApi.Controllers
                 return NotFound();
             }
 
-            var lead = await _context.Lead
+            var lead = await _context.Leads
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (lead == null)
             {
@@ -140,15 +140,15 @@ namespace TodoApi.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(long id)
         {
-            var lead = await _context.Lead.FindAsync(id);
-            _context.Lead.Remove(lead);
+            var lead = await _context.Leads.FindAsync(id);
+            _context.Leads.Remove(lead);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool LeadExists(long id)
         {
-            return _context.Lead.Any(e => e.Id == id);
+            return _context.Leads.Any(e => e.Id == id);
         }
     }
 }

@@ -5,144 +5,50 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using TodoApi;
+using TodoApi.Models;
 
 namespace TodoApi.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     public class BatteryController : Controller
     {
         private readonly app_developmentContext _context;
-
         public BatteryController(app_developmentContext context)
         {
             _context = context;
         }
 
-        // GET: Battery
-        public async Task<IActionResult> Index()
+        [Produces("application/json")]
+        [HttpGet]
+        public async Task<IActionResult> FindAll()
         {
-            return View(await _context.Lead.ToListAsync());
+            try
+            {
+                var products = _context.Batteries.ToList();
+                return Ok(products);
+            }
+            catch
+            {
+                return BadRequest();
+            }
         }
 
-        // GET: Battery/id
-        public async Task<IActionResult> Details(long? id)
+        [Produces("application/json")]
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetSpect(int id)
         {
-            if (id == null)
+            try
             {
-                return NotFound();
+                var products = _context.Batteries.Where(b => b.Id == id)
+                    .FirstOrDefault();
+                    var current_status = products.Status;
+                return Ok(current_status);
             }
-
-            var lead = await _context.Lead
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (lead == null)
+            catch
             {
-                return NotFound();
+                return BadRequest();
             }
-
-            return View(lead);
-        }
-
-        // GET: Battery/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Battery/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,BatteryType,Status,DateOfCommissioning,DateOfLastInspection,CertificateOfOperations,Information,Notes,CreatedAt,UpdatedAt,BuildingId,EmployeeId")] Leads lead)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(lead);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(lead);
-        }
-
-        // GET: Battery/Edit/
-        public async Task<IActionResult> Edit(long? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var lead = await _context.Lead.FindAsync(id);
-            if (lead == null)
-            {
-                return NotFound();
-            }
-            return View(lead);
-        }
-
-        // POST: Battery/Edit/
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(long id, [Bind("Id,BatteryType,Status,DateOfCommissioning,DateOfLastInspection,CertificateOfOperations,Information,Notes,CreatedAt,UpdatedAt,BuildingId,EmployeeId")] Leads lead)
-        {
-            if (id != lead.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(lead);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!LeadExists(lead.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(lead);
-        }
-
-        // GET: Battery/Delete/
-        public async Task<IActionResult> Delete(long? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var lead = await _context.Lead
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (lead == null)
-            {
-                return NotFound();
-            }
-
-            return View(lead);
-        }
-
-        // POST: Battery/Delete/
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(long id)
-        {
-            var lead = await _context.Lead.FindAsync(id);
-            _context.Lead.Remove(lead);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool LeadExists(long id)
-        {
-            return _context.Lead.Any(e => e.Id == id);
         }
     }
 }
