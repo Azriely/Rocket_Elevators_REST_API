@@ -4,4 +4,4 @@
 
 /obj/Debug/net5.0/TodoApi.assets.cache
 
-appsettings.json
+/TodoApi/appsettings.json
