@@ -9103,26 +9103,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Tyler\\.nuget\\packages\\": {}
+    "/Users/armanadibi/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tyler\\Desktop\\Rocket_Elevators_REST_API\\TodoApi\\TodoApi.csproj",
+      "projectUniqueName": "/Users/armanadibi/Desktop/Final/Rocket_Elevators_REST_API/TodoApi/TodoApi.csproj",
       "projectName": "TodoApi",
-      "projectPath": "C:\\Users\\Tyler\\Desktop\\Rocket_Elevators_REST_API\\TodoApi\\TodoApi.csproj",
-      "packagesPath": "C:\\Users\\Tyler\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tyler\\Desktop\\Rocket_Elevators_REST_API\\TodoApi\\obj\\",
+      "projectPath": "/Users/armanadibi/Desktop/Final/Rocket_Elevators_REST_API/TodoApi/TodoApi.csproj",
+      "packagesPath": "/Users/armanadibi/.nuget/packages/",
+      "outputPath": "/Users/armanadibi/Desktop/Final/Rocket_Elevators_REST_API/TodoApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Tyler\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/armanadibi/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -9198,7 +9196,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.403/RuntimeIdentifierGraph.json"
       }
     }
   },
