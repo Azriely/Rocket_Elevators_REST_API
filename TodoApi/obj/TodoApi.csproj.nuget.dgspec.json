@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/armanadibi/Desktop/Final/Rocket_Elevators_REST_API/TodoApi/TodoApi.csproj": {}
+    "/Users/armanadibi/Desktop/Test/Rocket_Elevators_REST_API/TodoApi/TodoApi.csproj": {}
   },
   "projects": {
-    "/Users/armanadibi/Desktop/Final/Rocket_Elevators_REST_API/TodoApi/TodoApi.csproj": {
+    "/Users/armanadibi/Desktop/Test/Rocket_Elevators_REST_API/TodoApi/TodoApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/armanadibi/Desktop/Final/Rocket_Elevators_REST_API/TodoApi/TodoApi.csproj",
+        "projectUniqueName": "/Users/armanadibi/Desktop/Test/Rocket_Elevators_REST_API/TodoApi/TodoApi.csproj",
         "projectName": "TodoApi",
-        "projectPath": "/Users/armanadibi/Desktop/Final/Rocket_Elevators_REST_API/TodoApi/TodoApi.csproj",
+        "projectPath": "/Users/armanadibi/Desktop/Test/Rocket_Elevators_REST_API/TodoApi/TodoApi.csproj",
         "packagesPath": "/Users/armanadibi/.nuget/packages/",
-        "outputPath": "/Users/armanadibi/Desktop/Final/Rocket_Elevators_REST_API/TodoApi/obj/",
+        "outputPath": "/Users/armanadibi/Desktop/Test/Rocket_Elevators_REST_API/TodoApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/armanadibi/.config/NuGet/NuGet.Config"

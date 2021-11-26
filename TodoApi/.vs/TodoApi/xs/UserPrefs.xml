@@ -1,16 +1,17 @@
 ﻿<Properties StartupConfiguration="{DE104850-7ADD-4FF6-B32A-A287718DBEFF}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/BatteryController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="appsettings.json">
     <Files>
       <File FileName="Controllers/BatteryController.cs" Line="20" Column="10" />
+      <File FileName="appsettings.json" Line="1" Column="1" />
+      <File FileName="appsettings.Development.json" Line="10" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="TodoApi" expanded="True">
             <Node name="TodoApi" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="BatteryController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="appsettings.json" expanded="True" selected="True" />
             </Node>
           </Node>
         </State>
