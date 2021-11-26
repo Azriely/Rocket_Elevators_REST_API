@@ -22,55 +22,24 @@ namespace TodoApi.Controllers
 
         [Produces("application/json")]
         [HttpGet]
-        public async Task<IActionResult> GetResult()
+        public List<Building> GetResult()
         {
-            try
-            {
-                List<Building> buildingList = new List<Building>();
-                var elevators  = _context.Elevators.ToList();
-                
 
-                foreach (var e in elevators)
-                {
-                    var elevator_status = e.Status;
-                    var column = _context.Columns.Where(b => b.Id == e.ColumnId)
-                    .FirstOrDefault();
-                    var column_status = column.Status;
 
-                    var battery = _context.Batteries.Where(b => b.Id == column.BatteryId)
-                    .FirstOrDefault();
-                    var batter_status = battery.Status;
-                    Console.WriteLine(battery.BuildingId);
-                    var building = _context.Buildings.Where(b => b.Id == battery.BuildingId)
-                    .FirstOrDefault();
-                    buildingList.Add(building);
-                    //if(elevator_status == "Intervention")
-                    //{
-                    //    var building = _context.Buildings.Where(b => b.Id == battery.BuildingId)
-                    //.FirstOrDefault();
-                    //    buildingList.Add(building);
 
-                    //}else if(column_status == "Intervention")
-                    //{
-                    //    var building = _context.Buildings.Where(b => b.Id == battery.BuildingId)
-                    //.FirstOrDefault();
-                    //    buildingList.Add(building);
-                    //}else if(batter_status == "Intervention")
-                    //{
-                    //    var building = _context.Buildings.Where(b => b.Id == battery.BuildingId)
-                    //.FirstOrDefault();
-                    //    buildingList.Add(building);
-                    //}
+            var elevator_status = _context.Buildings.Include(blog => blog.Batteries).ToList();
+            return elevator_status;
+            //try
+            //{
 
-                    //Console.WriteLine("Building Id : " + building.Id);
-
-                }
-                return Ok(buildingList);
-            }
-            catch
-            {
-                return BadRequest();
-            }
+            //    var elevator_status = _context.Buildings.Include(blog => blog.Batteries).ToList();
+            //    return elevator_status;
+            //    //return Ok(elevator_status);
+            //}
+            //catch
+            //{
+            //    return BadRequest();
+            //}
         }
     }
 }
