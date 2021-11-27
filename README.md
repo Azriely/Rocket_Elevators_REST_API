@@ -13,21 +13,21 @@ The REST API uses C# with .NET Core.
    
    <li>Changing the status of a specific Battery</li>
    <p>https://rocket-elevators-api.azurewebsites.net/battery</p>
-   <p>Edit in postman: {"id": "1", "status": "Inactive" }</p>
+   <p>In Postman body: {"id": "1", "status": "Inactive" }</p>
    
    <li>Retrieving the current status of a specific Column:</li>
    <p>https://rocket-elevators-api.azurewebsites.net/column/1</p>
    
    <li>Changing the status of a specific Column:</li>
    <p>https://rocket-elevators-api.azurewebsites.net/column</p>
-   <p>Edit in postman: {"id": "1",  "status": "Inactive" }</p>
+   <p>In Postman body: {"id": "1",  "status": "Inactive" }</p>
    
    <li>Retrieving the current status of a specific Elevator:</li>
    <p>https://rocket-elevators-api.azurewebsites.net/elevator/1</p>
    
    <li>Changing the status of a specific Elevator:</li>
    <p>https://rocket-elevators-api.azurewebsites.net/elevator</p>
-   <p>Edit in postman: {"id": "1",  "status": "Inactive" }</p>
+   <p>In Postman body: {"id": "1",  "status": "Inactive" }</p>
    
    <li>Retrieving a list of Elevators that are not in operation at the time of the request</li>
    <p>https://rocket-elevators-api.azurewebsites.net/elevator/inactive</p>
