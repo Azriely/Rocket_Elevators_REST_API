@@ -62,7 +62,7 @@ namespace TodoApi.Controllers
                 }
                 if(found == false)
                 {
-                    if(l.CreatedOn >= currentDate)
+                    if(l.CreatedAt >= currentDate)
                     {
                         recent_leads.Add(l);
                     }
