@@ -6,6 +6,9 @@ The REST API uses C# with .NET Core.
 <strong>Arman Adibi</strong> and <strong>Tyler Calderon</strong>
 </p>
 
+<li>URL for the Azure API</li>
+<p>https://rocket-elevators-api.azurewebsites.net/</p>
+
 ### Retrieving and Modifying The Data
 <ol>
    <li>Retrieving the current status of a specific Battery</li>
