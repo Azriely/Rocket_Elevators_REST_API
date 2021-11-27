@@ -35,23 +35,40 @@ namespace TodoApi.Controllers
         }
 
         [Produces("application/json")]
-        [HttpGet("list")]
+        [HttpGet("recent")]
         public async Task<IActionResult> GetList()
         {
-            var list = _context.Leads.Include(b => b.Customers);
-            if (list == null) {
-                return NotFound();
-            }
 
+            var leads = _context.Leads.ToList();
+            var customers = _context.Customers.ToList();
             List<Leads> recent_leads = new List<Leads>();
+
             DateTime currentDate = DateTime.Now.AddDays(-30);
-            foreach (var i in list) {
-                if (i.CreatedAt >= currentDate) {
-                    if (i.Customers.ToList().Count == 0) {
-                        recent_leads.Add(i);
+            Boolean found;
+            foreach (var l in leads)
+            {
+                found = false;
+                foreach(var custy in customers)
+                {
+                    if(l.Email != custy.ContactEmail)
+                    {
+                       
+                    }
+                    else
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+                if(found == false)
+                {
+                    if(l.CreatedOn >= currentDate)
+                    {
+                        recent_leads.Add(l);
                     }
                 }
             }
+
             return Ok(recent_leads);
         }
     }

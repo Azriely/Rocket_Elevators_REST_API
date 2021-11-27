@@ -5,6 +5,8 @@ C:\Users\Admin\Desktop\Rocket_Elevators_REST_API-main\TodoApi\obj\Release\net5.0
 C:\Users\Admin\Desktop\Rocket_Elevators_REST_API-main\TodoApi\obj\Release\net5.0\PubTmp\Out\TodoApi.runtimeconfig.json
 C:\Users\Admin\Desktop\Rocket_Elevators_REST_API-main\TodoApi\obj\Release\net5.0\PubTmp\Out\TodoApi.pdb
 C:\Users\Admin\Desktop\Rocket_Elevators_REST_API-main\TodoApi\obj\Release\net5.0\PubTmp\Out\Humanizer.dll
+C:\Users\Admin\Desktop\Rocket_Elevators_REST_API-main\TodoApi\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Admin\Desktop\Rocket_Elevators_REST_API-main\TodoApi\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\Admin\Desktop\Rocket_Elevators_REST_API-main\TodoApi\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Admin\Desktop\Rocket_Elevators_REST_API-main\TodoApi\obj\Release\net5.0\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Admin\Desktop\Rocket_Elevators_REST_API-main\TodoApi\obj\Release\net5.0\PubTmp\Out\Microsoft.CodeAnalysis.dll
@@ -39,6 +41,7 @@ C:\Users\Admin\Desktop\Rocket_Elevators_REST_API-main\TodoApi\obj\Release\net5.0
 C:\Users\Admin\Desktop\Rocket_Elevators_REST_API-main\TodoApi\obj\Release\net5.0\PubTmp\Out\MySql.Data.dll
 C:\Users\Admin\Desktop\Rocket_Elevators_REST_API-main\TodoApi\obj\Release\net5.0\PubTmp\Out\MySqlConnector.dll
 C:\Users\Admin\Desktop\Rocket_Elevators_REST_API-main\TodoApi\obj\Release\net5.0\PubTmp\Out\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\Rocket_Elevators_REST_API-main\TodoApi\obj\Release\net5.0\PubTmp\Out\Newtonsoft.Json.Bson.dll
 C:\Users\Admin\Desktop\Rocket_Elevators_REST_API-main\TodoApi\obj\Release\net5.0\PubTmp\Out\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Users\Admin\Desktop\Rocket_Elevators_REST_API-main\TodoApi\obj\Release\net5.0\PubTmp\Out\Pomelo.EntityFrameworkCore.MySql.Design.dll
 C:\Users\Admin\Desktop\Rocket_Elevators_REST_API-main\TodoApi\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll

@@ -51,7 +51,7 @@ namespace TodoApi.Controllers
             }
         }
         [Produces("application/json")]
-        [HttpGet("none")]
+        [HttpGet("inactive")]
         public async Task<IActionResult> GetSpect1()
         {
             try
@@ -85,7 +85,7 @@ namespace TodoApi.Controllers
                 var current_status = products.Status;
                 products.Status = input.Status;
                 _context.SaveChanges();
-                return Ok(current_status);
+                return Ok("Status has been successfully changed");
             }
             catch
             {

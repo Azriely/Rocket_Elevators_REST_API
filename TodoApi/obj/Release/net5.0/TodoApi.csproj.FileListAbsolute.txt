@@ -138,3 +138,6 @@ C:\Users\Admin\Desktop\Rocket_Elevators_REST_API-main\TodoApi\obj\Release\net5.0
 C:\Users\Admin\Desktop\Rocket_Elevators_REST_API-main\TodoApi\obj\Release\net5.0\ref\TodoApi.dll
 C:\Users\Admin\Desktop\Rocket_Elevators_REST_API-main\TodoApi\obj\Release\net5.0\TodoApi.pdb
 C:\Users\Admin\Desktop\Rocket_Elevators_REST_API-main\TodoApi\obj\Release\net5.0\TodoApi.genruntimeconfig.cache
+C:\Users\Admin\Desktop\Rocket_Elevators_REST_API-main\TodoApi\bin\Release\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Admin\Desktop\Rocket_Elevators_REST_API-main\TodoApi\bin\Release\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Admin\Desktop\Rocket_Elevators_REST_API-main\TodoApi\bin\Release\net5.0\Newtonsoft.Json.Bson.dll

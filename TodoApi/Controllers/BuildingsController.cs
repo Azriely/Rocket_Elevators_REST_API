@@ -22,24 +22,59 @@ namespace TodoApi.Controllers
 
         [Produces("application/json")]
         [HttpGet]
-        public List<Building> GetResult()
+        public async Task<IActionResult> Get()
         {
 
 
+            var c = "";
+            var buildings = _context.Buildings.Include(b => b.Batteries).ThenInclude(c => c.Columns).ThenInclude(e => e.Elevators).ToList();
+           
+            List<Building> buildinglist = new List<Building>();
+            foreach(var b in buildings)
+            {
+                var battery = b.Batteries.ToList();
+                var count_buildinglist = buildinglist.Count;
+                foreach(var t in battery)
+                {
+                    if (t.Status == "Intervention")
+                    {
+                        buildinglist.Add(b);
+                        break;
+                    }
+                    else
+                    {
+                        var column = t.Columns.ToList();
+                        foreach (var v in column)
+                        {
+                            if (v.Status == "Intervention")
+                            {
+                                buildinglist.Add(b);
+                                break;
+                            }
+                            else
+                            {
+                                var elevator = v.Elevators.ToList();
+                                foreach (var e in elevator)
+                                {
+                                    if (e.Status == "Intervention")
+                                    {
+                                        buildinglist.Add(b);
+                                        break;
+                                    }
+                                }
+                            }
+                        }
 
-            var elevator_status = _context.Buildings.Include(blog => blog.Batteries).ToList();
-            return elevator_status;
-            //try
-            //{
 
-            //    var elevator_status = _context.Buildings.Include(blog => blog.Batteries).ToList();
-            //    return elevator_status;
-            //    //return Ok(elevator_status);
-            //}
-            //catch
-            //{
-            //    return BadRequest();
-            //}
+                    }
+                  
+                }
+               
+
+            }
+            
+            return Ok(buildinglist);
+          
         }
     }
 }

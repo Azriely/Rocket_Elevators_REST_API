@@ -62,7 +62,7 @@ namespace TodoApi.Controllers
                 var current_status = products.Status;
                 products.Status = input.Status;
                 _context.SaveChanges();
-                return Ok(current_status);
+                return Ok("Status has been successfully changed");
             }
             catch
             {
