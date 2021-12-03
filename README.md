@@ -36,4 +36,7 @@ The REST API uses C# with .NET Core.
    
    <li>Retrieving a list of Leads created in the last 30 days who have not yet become customers.</li>
    <p>https://rocketelevators1.azurewebsites.net/leads/recent</p>
+   
+   <li>Retrieve a list of current Interventions</li>
+   <p>https://rocketelevators1.azurewebsites.net/interventions</p>
 </ol>
