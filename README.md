@@ -2,9 +2,8 @@
 
 The REST API uses C# with .NET Core.
 
-### REST API Team
-<strong>Arman Adibi</strong> and <strong>Tyler Calderon</strong>
-</p>
+### API URL
+   <p>https://rocketelevators1.azurewebsites.net</p>
 
 ### Retrieving and Modifying The Data
 <ol>
