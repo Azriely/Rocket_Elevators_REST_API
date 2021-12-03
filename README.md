@@ -40,7 +40,11 @@ The REST API uses C# with .NET Core.
    <li>Retrieve a list of current Interventions</li>
    <p>https://rocketelevators1.azurewebsites.net/interventions</p>
    
-   <li>Change the status of a specific Intervention</li>
+   <li>Change the status of a specific Intervention to "InProgress" (adds a start date and time Timestamp)</li>
    <p>https://rocketelevators1.azurewebsites.net/interventions</p>
    <p>In Postman body: {"id": "1","status": "InProgress"}</p>
+   
+   <li>Change the status of a specific Intervention to "Completed" (adds an end date and time Timestamp)</li>
+   <p>https://rocketelevators1.azurewebsites.net/interventions</p>
+   <p>In Postman body: {"id": "1","status": "Completed"}</p>
 </ol>
