@@ -14,8 +14,8 @@ namespace TodoApi.Controllers
     [Route("[controller]")]
     public class BuildingsController : Controller
     {
-        private readonly app_developmentContext _context;
-        public BuildingsController(app_developmentContext context)
+        private readonly MatthewDandurandContext _context;
+        public BuildingsController(MatthewDandurandContext context)
         {
             _context = context;
         }
