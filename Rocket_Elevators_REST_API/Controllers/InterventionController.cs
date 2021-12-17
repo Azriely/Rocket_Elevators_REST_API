@@ -13,8 +13,8 @@ namespace Rocket_Elevators_REST_API.Controllers
     public class InterventionController : Controller
     {
         // GET: /<controller>/
-        private readonly armanadibiContext _context;
-        public InterventionController(armanadibiContext context)
+        private readonly matthewdandurandContext _context;
+        public InterventionController(matthewdandurandContext context)
         {
             _context = context;
         }

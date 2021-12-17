@@ -28,7 +28,7 @@ namespace Rocket_Elevators_REST_API
         {
             string dbstring = Configuration.GetConnectionString("dbstring");
             var serverVersion = new MySqlServerVersion(new Version(5, 0));
-            services.AddDbContext<armanadibiContext>(opt =>
+            services.AddDbContext<matthewdandurandContext>(opt =>
                     opt.UseMySql(dbstring, serverVersion));
             services.AddMvc();
             services.AddControllers();

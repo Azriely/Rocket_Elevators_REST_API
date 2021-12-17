@@ -13,8 +13,8 @@ namespace Rocket_Elevators_REST_API.Controllers
     [Route("[controller]")]
     public class ElevatorController : Controller
     {
-        private readonly armanadibiContext _context;
-        public ElevatorController(armanadibiContext context)
+        private readonly matthewdandurandContext _context;
+        public ElevatorController(matthewdandurandContext context)
         {
             _context = context;
         }
